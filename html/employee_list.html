@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee List</title>
+
+  <!-- FontAwesome 6.1.1 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- BOOTSTRAP 4.6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="../css/employee_list.min.css" />
+</head>
+
+<body>
+
+
+  <div class="employee-container">
+    <div class="sidebar">
+      <div class="logo"><i class="fa-solid fa-users"></i> <span>Employee</span></div>
+      <nav>
+        <ul>
+          <li class="li-parent"><a href="#"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+          <li class="li-parent">
+            <a href="#"> <i class="fa-solid fa-chart-gantt"></i> Employee manager <i class="fa-solid fa-angle-down"></i> </a>
+            <ul class="ul-child">
+              <li class="li-child active"><a href="employee_list.html"><i class="fa-solid fa-list"></i> Employee list</a></li>
+              <li class="li-child"><a href="employee_container.html"><i class="fa-solid fa-plus"></i> Add Employee</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main-content-container">
+      <header>
+        <div class="welcome">Welcome Long</div>
+        <div class="logout"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></div>
+      </header>
+      <div class="main-content">
+
+        <h2>Employee list</h2>
+        <hr>
+        <div class="user-search-container">
+          <div class="user-search">
+            <div class="input-container">
+              <span class="search-icon">&#xf002;</span>
+              <input type="text" placeholder="User Search" />
+            </div>
+            <div class="filter-container">
+              <div class="filter-content">
+                <span class="filter-icon">&#xf0b0;</span>
+                <span class="filter-by">Filter By</span>
+              </div>
+              
+              <div class="dropdown">
+                <select>
+                  <option value="name">Name</option>
+                  <!-- Thêm các tùy chọn khác nếu cần -->
+                </select>
+                <span class="dropdown-icon">&#xf0d7;</span>
+              </div>
+            </div>
+            <button class="search-button">Search</button>
+          </div>
+        </div>
+
+
+        <div class="employee-list">
+          <div class="total">Total employee: 14</div>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date of birth</th>
+                <th>Address</th>
+                <th>Phone number</th>
+                <th>Department</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Employee data rows -->
+              <tr>
+                <td>101</td>
+                <td>Nguyen Van A</td>
+                <td>2000-01-01</td>
+                <td>Ha Noi, Vietnam</td>
+                <td>0123456789</td>
+                <td>Sales</td>
+                <td><i class="fas fa-eye"></i> <a href="#" class="view-link">View</a> &nbsp; <i class="fas fa-trash-alt"></i> <a
+                    href="#" class="delete-link">Delete</a></td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>Tran Thi B</td>
+                <td>2001-02-02</td>
+                <td>Ho Chi Minh City, Vietnam</td>
+                <td>0987654321</td>
+                <td>Marketing</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>103</td>
+                <td>Le Minh C</td>
+                <td>2002-03-03</td>
+                <td>Da Nang, Vietnam</td>
+                <td>0123987654</td>
+                <td>IT</td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+          <div class="pagination">
+            <div class="pagination-container">
+              <a href="#">Previous</a>
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">Next</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- JavaScript dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+    </script>
+
+  <!-- Ajax -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Custom JavaScript files -->
+  <script src="../js/drop_down.js"></script>
+
+</body>
+
+</html>

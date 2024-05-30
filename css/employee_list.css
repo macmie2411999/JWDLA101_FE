@@ -1,0 +1,275 @@
+.employee-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100lvh;
+}
+.employee-container .fa-users {
+  margin-right: 10px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #eee;
+  color: #333;
+}
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6f6f6f;
+  padding: 15px;
+}
+.sidebar .ul-child {
+  margin: 0 !important;
+}
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0 !important;
+}
+.sidebar nav ul .li-parent {
+  border-bottom: 1px solid #d5d5d5;
+}
+.sidebar nav ul .li-parent .fa-angle-down {
+  margin-left: 40px;
+}
+.sidebar nav ul .li-parent a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+.sidebar nav ul .li-parent a:hover {
+  background-color: #d5d5d5;
+}
+.sidebar nav ul .li-child {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.sidebar nav ul .li-child a {
+  display: block;
+  color: #007bff;
+  padding: 10px 35px !important;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.sidebar nav ul .li-child a:hover {
+  background-color: #d5d5d5;
+}
+.sidebar nav ul .ul-child {
+  display: none;
+  /* Initially hide the child ul */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav ul .ul-child .active {
+  background-color: #d5d5d5;
+}
+.sidebar nav ul .li-parent.active .ul-child {
+  display: block;
+  /* Show child ul on active parent */
+}
+.sidebar nav ul ul {
+  margin-left: 20px;
+}
+
+.main-content-container {
+  flex: 1;
+}
+.main-content-container header {
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: #eee;
+}
+.main-content-container header .welcome {
+  font-weight: bold;
+  margin-right: 30px;
+  color: purple;
+}
+.main-content-container header .logout {
+  color: purple;
+  cursor: pointer;
+}
+.main-content-container header .logout:hover {
+  color: #4d004d;
+}
+.main-content-container .main-content {
+  padding: 20px;
+  background-color: #fff;
+}
+.main-content-container .main-content h2 {
+  margin-bottom: 10px;
+}
+.main-content-container .main-content .user-search-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.main-content-container .main-content .user-search {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 70%;
+  border-radius: 4px;
+  padding: 8px;
+}
+.main-content-container .main-content .user-search .input-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.main-content-container .main-content .user-search .input-container .search-icon {
+  padding: 5px 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #666;
+  background-color: #eee;
+}
+.main-content-container .main-content .user-search .input-container input[type=text] {
+  flex-grow: 1;
+  border: none;
+  background-color: #fff;
+  margin: 5px;
+  font-size: 16px;
+}
+.main-content-container .main-content .user-search .input-container input[type=text]::-moz-placeholder {
+  color: #999;
+}
+.main-content-container .main-content .user-search .input-container input[type=text]::placeholder {
+  color: #999;
+}
+.main-content-container .main-content .user-search .filter-container {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  padding: 0 0 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #eee;
+}
+.main-content-container .main-content .user-search .filter-container .filter-content {
+  border-radius: 5px;
+}
+.main-content-container .main-content .user-search .filter-container .filter-icon {
+  margin-right: 4px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #666;
+}
+.main-content-container .main-content .user-search .filter-container .filter-by {
+  margin-right: 12px;
+  font-weight: bold;
+}
+.main-content-container .main-content .user-search .filter-container .dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+}
+.main-content-container .main-content .user-search .filter-container .dropdown select {
+  padding: 4px 24px 4px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+}
+.main-content-container .main-content .user-search .filter-container .dropdown .dropdown-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #666;
+}
+.main-content-container .main-content .user-search .search-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.main-content-container .main-content .user-search .search-button:hover {
+  background-color: #0062cc;
+}
+.main-content-container .main-content .employee-list {
+  font-size: 14px;
+}
+.main-content-container .main-content .employee-list .total {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.main-content-container .main-content .employee-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main-content-container .main-content .employee-list table th,
+.main-content-container .main-content .employee-list table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.main-content-container .main-content .employee-list table th {
+  background-color: #eee;
+  color: #555555;
+}
+.main-content-container .main-content .employee-list table tr:nth-child(even) {
+  background-color: #eee;
+}
+.main-content-container .main-content .employee-list table .view-link,
+.main-content-container .main-content .employee-list table .delete-link {
+  color: #333;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.main-content-container .main-content .employee-list table .view-link:hover,
+.main-content-container .main-content .employee-list table .delete-link:hover {
+  text-decoration: underline;
+}
+.main-content-container .main-content .employee-list table .view-link {
+  color: #007bff;
+}
+.main-content-container .main-content .employee-list table .fa-eye {
+  color: #007bff !important;
+}
+.main-content-container .main-content .employee-list table .delete-link {
+  color: red;
+}
+.main-content-container .main-content .employee-list table .fa-trash-can {
+  color: red !important;
+}
+.main-content-container .main-content .employee-list .pagination {
+  display: flex;
+  margin-top: 20px;
+}
+.main-content-container .main-content .employee-list .pagination .pagination-container {
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0 !important;
+}
+.main-content-container .main-content .employee-list .pagination .pagination-container a {
+  color: #007bff;
+  margin: 0 !important;
+  padding: 3px 12px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+.main-content-container .main-content .employee-list .pagination .pagination-container a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+.main-content-container .main-content .employee-list .pagination .pagination-container a:hover:not(.active) {
+  background-color: #99caff;
+}

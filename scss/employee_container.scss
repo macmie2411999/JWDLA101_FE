@@ -1,0 +1,223 @@
+// Variables
+$primary-color: #333;
+$secondary-color: #666;
+$accent-color: #007bff;
+$required-color: #dc3545;
+$sidebar-width: 200px;
+
+// Styles
+
+// Variables
+$primary-color: #333;
+$secondary-color: #666;
+$accent-color: #007bff;
+$sidebar-width: 250px;
+
+// Styles
+.employee-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100lvh;
+
+  .fa-users{
+    margin-right: 10px;
+  }
+}
+
+.sidebar {
+  width: $sidebar-width;
+  background-color: #eee;
+  color: #333;
+  // padding: 20px;
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: darken(#eee, 50%);
+    // margin-bottom: 20px;
+    padding: 15px;
+    // margin: 0 20px 20px 20px;
+  }
+
+  .ul-child {
+    margin: 0 !important;
+    // padding: 0 15px !important;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0 !important;
+    // padding: 20px;
+
+    .li-parent {
+      border-bottom: 1px solid darken(#eee, 10%);
+      // align-items: right;
+
+      .fa-angle-down {
+        margin-left: 40px;
+      }
+
+      a {
+        display: block;
+        color: $accent-color;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken(#eee, 10%);
+        }
+      }
+    }
+
+    .li-child {
+      margin: 0 !important;
+      padding: 0 !important;
+
+      a {
+        display: block;
+        color: $accent-color;
+        padding: 10px 35px !important;
+        text-decoration: none;
+
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken(#eee, 10%);
+        }
+      }
+    }
+
+    .ul-child {
+      display: none;
+      /* Initially hide the child ul */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .active {
+        background-color: darken(#eee, 10%);
+      }
+    }
+
+    .li-parent.active .ul-child {
+      display: block;
+      /* Show child ul on active parent */
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  }
+}
+
+.main-content-container {
+  flex: 1;
+
+  header {
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    // margin-bottom: 20px;
+    background-color: #eee;
+
+    .welcome {
+      // font-weight: bold;
+      margin-right: 30px;
+      color: $accent-color;
+    }
+
+    .logout {
+      color: $accent-color;
+      cursor: pointer;
+
+      &:hover{
+        color: darken($accent-color, 10%);
+      }
+    }
+  }
+
+  .main-content {
+    padding: 40px 60px 60px 60px;
+
+    .employee-form {
+      min-width: 600px;
+
+      .form-group {
+        margin-bottom: 20px;
+
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 5px;
+
+          .required {
+            color: $required-color;
+            margin-left: 5px;
+          }
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        textarea,
+        select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid $secondary-color;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        textarea {
+          height: 100px;
+        }
+
+        .radio-group {
+          display: flex;
+          align-items: center;
+
+          input[type="radio"] {
+            margin-right: 5px;
+          }
+
+          label {
+            font-weight: normal;
+            margin-right: 20px;
+          }
+        }
+      }
+
+      .form-actions {
+        display: flex;
+        justify-content: flex-start;
+
+        .btn {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-left: 10px;
+
+          &.btn-back {
+            background-color: $secondary-color;
+            color: #fff;
+          }
+
+          &.btn-reset {
+            background-color: #ffc107;
+            color: #fff;
+          }
+
+          &.btn-add {
+            background-color: $accent-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

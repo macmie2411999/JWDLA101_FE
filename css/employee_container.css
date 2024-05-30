@@ -1,0 +1,164 @@
+.employee-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100lvh;
+}
+.employee-container .fa-users {
+  margin-right: 10px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #eee;
+  color: #333;
+}
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6f6f6f;
+  padding: 15px;
+}
+.sidebar .ul-child {
+  margin: 0 !important;
+}
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0 !important;
+}
+.sidebar nav ul .li-parent {
+  border-bottom: 1px solid #d5d5d5;
+}
+.sidebar nav ul .li-parent .fa-angle-down {
+  margin-left: 40px;
+}
+.sidebar nav ul .li-parent a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+.sidebar nav ul .li-parent a:hover {
+  background-color: #d5d5d5;
+}
+.sidebar nav ul .li-child {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.sidebar nav ul .li-child a {
+  display: block;
+  color: #007bff;
+  padding: 10px 35px !important;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.sidebar nav ul .li-child a:hover {
+  background-color: #d5d5d5;
+}
+.sidebar nav ul .ul-child {
+  display: none;
+  /* Initially hide the child ul */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav ul .ul-child .active {
+  background-color: #d5d5d5;
+}
+.sidebar nav ul .li-parent.active .ul-child {
+  display: block;
+  /* Show child ul on active parent */
+}
+.sidebar nav ul ul {
+  margin-left: 20px;
+}
+
+.main-content-container {
+  flex: 1;
+}
+.main-content-container header {
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: #eee;
+}
+.main-content-container header .welcome {
+  margin-right: 30px;
+  color: #007bff;
+}
+.main-content-container header .logout {
+  color: #007bff;
+  cursor: pointer;
+}
+.main-content-container header .logout:hover {
+  color: #0062cc;
+}
+.main-content-container .main-content {
+  padding: 40px 60px 60px 60px;
+}
+.main-content-container .main-content .employee-form {
+  min-width: 600px;
+}
+.main-content-container .main-content .employee-form .form-group {
+  margin-bottom: 20px;
+}
+.main-content-container .main-content .employee-form .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.main-content-container .main-content .employee-form .form-group label .required {
+  color: #dc3545;
+  margin-left: 5px;
+}
+.main-content-container .main-content .employee-form .form-group input[type=text],
+.main-content-container .main-content .employee-form .form-group input[type=tel],
+.main-content-container .main-content .employee-form .form-group input[type=email],
+.main-content-container .main-content .employee-form .form-group input[type=password],
+.main-content-container .main-content .employee-form .form-group input[type=date],
+.main-content-container .main-content .employee-form .form-group textarea,
+.main-content-container .main-content .employee-form .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.main-content-container .main-content .employee-form .form-group textarea {
+  height: 100px;
+}
+.main-content-container .main-content .employee-form .form-group .radio-group {
+  display: flex;
+  align-items: center;
+}
+.main-content-container .main-content .employee-form .form-group .radio-group input[type=radio] {
+  margin-right: 5px;
+}
+.main-content-container .main-content .employee-form .form-group .radio-group label {
+  font-weight: normal;
+  margin-right: 20px;
+}
+.main-content-container .main-content .employee-form .form-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+.main-content-container .main-content .employee-form .form-actions .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.main-content-container .main-content .employee-form .form-actions .btn.btn-back {
+  background-color: #666;
+  color: #fff;
+}
+.main-content-container .main-content .employee-form .form-actions .btn.btn-reset {
+  background-color: #ffc107;
+  color: #fff;
+}
+.main-content-container .main-content .employee-form .form-actions .btn.btn-add {
+  background-color: #007bff;
+  color: #fff;
+}
